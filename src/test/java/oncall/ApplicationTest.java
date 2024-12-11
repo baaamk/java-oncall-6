@@ -2,8 +2,12 @@ package oncall;
 
 import static camp.nextstep.edu.missionutils.test.Assertions.assertSimpleTest;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
+import oncall.domain.Worker;
+import oncall.exception.IllegalNameException;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class ApplicationTest extends NsTest {
@@ -71,6 +75,15 @@ class ApplicationTest extends NsTest {
             );
         });
     }
+
+    @DisplayName("근무자의 이름은 5자 이하여야 한다.")
+    @Test
+    void WorkerTest() {
+        assertThatThrownBy(() -> new Worker("abcdef"))
+                .isInstanceOf(IllegalNameException.class)
+                .hasMessage("[ERROR] 이름이 5자 초과입니다. 다시 입력해 주세요.");
+    }
+
 
     @Override
     protected void runMain() {
