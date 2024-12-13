@@ -130,6 +130,6 @@
 - [x] 비상근무 계획 관련 상수를 저장한다.
 
 ### RepeatExecutor
-- [ ] 실행이 성공할 때까지 재실행을 한다.
-  - [ ] `IllegalStateException` 예외가 발생하는 경우, 재실행을 한다.
-  - [ ] `IllegalArgumentException` 예외가 발생하는 경우, 오류 메시지를 출력하고 재입력을 받는다.
+- [x] 실행이 성공할 때까지 재실행을 한다.
+  - [x] `IllegalStateException` 예외가 발생하는 경우, 재실행을 한다.
+  - [x] `IllegalArgumentException` 예외가 발생하는 경우, 오류 메시지를 출력하고 재입력을 받는다.
