@@ -36,6 +36,7 @@ public class PlanManager {
         start();
         processPlanStaffs();
         processPlanCalendar();
+        finish();
     }
 
     private void start() {
@@ -98,6 +99,10 @@ public class PlanManager {
                 weekendStaffs.offer(weekendStaffs.poll());
             }
         }
+    }
+
+    private void finish() {
+        outputView.printPlanCalendar(planCalendar.toString());
     }
 
     private List<String> preparePlanStart() {
