@@ -8,7 +8,30 @@
 ## 프로젝트 구조
 
 ```plaintext
-
+└── oncall
+    ├── Application.java
+    ├── controller
+    │ └── PlanManager.java
+    ├── domain
+    │ ├── PlanCalendar.java
+    │ ├── PlanDate.java
+    │ └── enums
+    │     ├── DayName.java
+    │     ├── Holiday.java
+    │     └── Month.java
+    ├── handler
+    │ ├── ErrorArgumentHandler.java
+    │ └── ErrorStateHandler.java
+    ├── util
+    │ ├── Constants.java
+    │ └── RepeatExecutor.java
+    ├── validator
+    │ ├── AllStaffsValidator.java
+    │ ├── PlanStartValidator.java
+    │ └── StaffsValidator.java
+    └── view
+        ├── InputView.java
+        └── OutputView.java
 ```
 
 
@@ -16,6 +39,7 @@
 
 ## 프로젝트 다이어그램
 
+![프로젝트 다이어그램](./main.png)
 
 
 ---
