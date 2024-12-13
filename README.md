@@ -118,8 +118,8 @@
   - [x] 예외 메시지는 `[ERROR]`로 시작한다.
 
 ### ErrorStateHandler
-- [ ] 잘못된 실행인 경우, `IllegalStateException` 예외를 발생시킨다.
-  - [ ] 예외 메시지는 `[ERROR]`로 시작한다.
+- [x] 잘못된 실행인 경우, `IllegalStateException` 예외를 발생시킨다.
+  - [x] 예외 메시지는 `[ERROR]`로 시작한다.
 
 
 ---
