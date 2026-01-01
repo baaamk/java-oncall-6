@@ -19,8 +19,6 @@ public enum Month {
     private final int month;
     private final int days;
 
-
-
     private final Set<Integer> holidays;
 
     Month(int month, int days, Set<Integer> holidays) {
