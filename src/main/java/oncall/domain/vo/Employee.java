@@ -1,4 +1,4 @@
-package oncall.domain;
+package oncall.domain.vo;
 
 import oncall.exception.ErrorMessage;
 
