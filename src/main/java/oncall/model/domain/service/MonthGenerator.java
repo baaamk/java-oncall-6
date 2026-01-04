@@ -1,8 +1,8 @@
-package oncall.service;
+package oncall.model.domain.service;
 
-import oncall.domain.vo.Day;
-import oncall.domain.vo.Month;
-import oncall.domain.vo.Week;
+import oncall.model.domain.vo.Day;
+import oncall.model.domain.vo.Month;
+import oncall.model.domain.vo.Week;
 
 import java.util.ArrayList;
 import java.util.List;
