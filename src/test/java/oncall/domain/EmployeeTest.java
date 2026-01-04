@@ -1,6 +1,6 @@
 package oncall.domain;
 
-import oncall.domain.vo.Employee;
+import oncall.model.domain.vo.Employee;
 import oncall.exception.ErrorMessage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
