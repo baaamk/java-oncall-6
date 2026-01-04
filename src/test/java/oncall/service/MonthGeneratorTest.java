@@ -1,14 +1,14 @@
 package oncall.service;
 
-import oncall.domain.vo.Day;
-import oncall.domain.vo.Month;
-import oncall.domain.vo.Week;
+import oncall.model.domain.service.MonthGenerator;
+import oncall.model.domain.vo.Day;
+import oncall.model.domain.vo.Month;
+import oncall.model.domain.vo.Week;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MonthGeneratorTest {
 
