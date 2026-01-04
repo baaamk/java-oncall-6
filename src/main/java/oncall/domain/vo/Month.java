@@ -1,5 +1,6 @@
 package oncall.domain.vo;
 
+import java.util.Arrays;
 import java.util.Set;
 
 public enum Month {
@@ -25,6 +26,13 @@ public enum Month {
         this.month = month;
         this.days = days;
         this.holidays = holidays;
+    }
+
+    public static Month from(int month) {
+        return Arrays.stream(values())
+                .filter(m -> m.month == month)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("유효하지 않은 월입니다."));
     }
 
     public int getMonth() {
