@@ -2,6 +2,7 @@ package oncall.model.domain.vo;
 
 import oncall.exception.ErrorMessage;
 
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public class Employee {
@@ -19,6 +20,10 @@ public class Employee {
         return new Employee(name);
     }
 
+    public String getName() {
+        return name;
+    }
+
     private static void validateName(String name) {
         if (name.length() > MAX_NAME_LENGTH) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_RANGE_NAME.getMessage());
@@ -28,5 +33,17 @@ public class Employee {
             throw new IllegalArgumentException(ErrorMessage.INVALID_FORMAT_NAME.getMessage());
         }
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(name, employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
     }
 }

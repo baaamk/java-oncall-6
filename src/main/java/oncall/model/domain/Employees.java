@@ -4,7 +4,6 @@ import oncall.exception.ErrorMessage;
 import oncall.model.domain.vo.Employee;
 
 import java.util.List;
-import java.util.Objects;
 
 
 public class Employees {
@@ -27,21 +26,21 @@ public class Employees {
         if (isDuplicate(employees)){
             throw new IllegalArgumentException(ErrorMessage.DUPLICATE_EMPLOYEE.getMessage());
         }
+        if (employees.size() < 5 || employees.size() < 35) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_EMPLOY_RANGE.getMessage());
+        }
     }
 
     private static boolean isDuplicate(List<String> employees) {
-        return employees.size() != employees.stream().distinct().toList().size();
+        return employees.size() != employees.stream().distinct().count();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Employees employees1 = (Employees) o;
-        return Objects.equals(employees, employees1.employees);
+    public int size() {
+        return employees.size();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(employees);
+    public Employee get(int index) {
+        return employees.get(index);
     }
+
 }

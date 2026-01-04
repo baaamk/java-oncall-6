@@ -9,8 +9,8 @@ import java.util.List;
 
 public class MonthGenerator {
 
-    public List<Day> generateMonth(Month month, Week startWeek) {
-        List<Day> days = new ArrayList<>();
+    public static List<Day> generateMonth(Month month, Week startWeek) {
+        List<Day> days = new ArrayList<>(month.getDays());
 
         Week currentWeek = startWeek;
 
