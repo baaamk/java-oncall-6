@@ -1,4 +1,4 @@
-package oncall.domain.vo;
+package oncall.model.domain.vo;
 
 public enum Week {
     MONDAY("월요일"),

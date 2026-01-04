@@ -1,4 +1,4 @@
-package oncall.domain.vo;
+package oncall.model.domain.vo;
 
 import java.util.Arrays;
 import java.util.Set;

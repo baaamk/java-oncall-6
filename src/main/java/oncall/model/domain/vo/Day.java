@@ -1,4 +1,4 @@
-package oncall.domain.vo;
+package oncall.model.domain.vo;
 
 public class Day {
     private final int date;
