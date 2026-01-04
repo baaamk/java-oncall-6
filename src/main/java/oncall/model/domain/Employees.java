@@ -26,7 +26,7 @@ public class Employees {
         if (isDuplicate(employees)){
             throw new IllegalArgumentException(ErrorMessage.DUPLICATE_EMPLOYEE.getMessage());
         }
-        if (employees.size() < 5 || employees.size() < 35) {
+        if (employees.size() < 5 || employees.size() > 35) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_EMPLOY_RANGE.getMessage());
         }
     }
