@@ -24,9 +24,13 @@ public class WorkScheduler {
         for (Day day : days) {
             boolean holiday = isHoliday(day, month);
 
-            Employees pool = holiday ? holidayWorkers : weekdayWorkers;
+            Employees pool = weekdayWorkers;
+            int idx = weekdayIdx;
 
-            int idx = holiday ? holidayIdx : weekdayIdx;
+            if (holiday) {
+                pool = holidayWorkers;
+                idx = holidayIdx;
+            }
 
             String candidate = pool.get(idx % pool.size()).getName();
 
@@ -41,21 +45,18 @@ public class WorkScheduler {
                 holidayIdx = idx + 1;
             }
 
-            if(!holiday){
+            if (!holiday) {
                 weekdayIdx = idx + 1;
             }
-
         }
 
         return assigned;
     }
 
     private static boolean isHoliday(Day day, Month month) {
-
         Week week = day.getWeek();
         boolean weekend = (week == Week.SATURDAY || week == Week.SUNDAY);
         boolean legalHoliday = month.getHolidays().contains(day.getDate());
-
         return weekend || legalHoliday;
     }
 }
