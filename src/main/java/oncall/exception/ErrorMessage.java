@@ -7,12 +7,13 @@ public enum ErrorMessage {
     INVALID_EMPLOY_RANGE("근무자는 최소 5명, 최대 35명 입니다.");
 
     private final String message;
+    private final static String PREFIX = "[ERROR]";
 
     ErrorMessage(String message) {
         this.message = message;
     }
 
     public String getMessage() {
-        return message;
+        return PREFIX + message;
     }
 }
